@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureLeaf Marketing - Écologie et Création Publicitaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body id="top">
+    <header>
+        <div class="navbar">
+            <img src="https://via.placeholder.com/150x50?text=PureLeaf+Marketing" alt="PureLeaf Marketing Logo"
+                class="agency-logo">
+            <span class="navbar-title">PURELEAF MARKETING®</span>
+            <nav class="nav-menu">
+                <a href="#top">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#location">Localisation</a>
+            </nav>
+        </div>
+        <div class="banner">
+            <img src="https://www.istyass.com/web/image/456-f895a540/Image2.jpg" alt="Nature Banner">
+        </div>
+    </header>
+
+    <section id="main-content">
+        <div class="logo-section">
+            <div class="partners">
+                <h2>Nos principaux partenaires</h2>
+                <div class="partner-cards">
+                    <div class="partner-card logo-card small-card">
+                        <img src="images/logo.png" alt="PureLeaf Logo" style="border-radius: 10px;">
+                    </div>
+                    <a href="https://www.instagram.com/xsqueezie/" target="_blank" class="partner-card"
+                        data-name="Squeezie">
+                        <div class="partner-name">Squeezie</div>
+                    </a>
+                    <a href="https://www.instagram.com/mastuu_/" target="_blank" class="partner-card"
+                        data-name="Mastu">
+                        <div class="partner-name">Mastu</div>
+                    </a>
+                    <a href="https://www.instagram.com/joyca" target="_blank" class="partner-card" data-name="Joyca">
+                        <div class="partner-name">Joyca</div>
+                    </a>
+                    <div class="partner-card other-partners" id="show-youtubers">
+                        <div class="partner-name">Et bien d'autres</div>
+                    </div>
+                    <div class="partner-card logo-card small-card">
+                        <img src="images/logo.png" alt="PureLeaf Logo" style="border-radius: 10px;">
+                    </div>
+                </div>
+                <div class="youtuber-list" id="youtuber-list" style="display: none;">
+                    <ul>
+                        <li><a href="https://www.instagram.com/inoxtag/" target="_blank"
+                                class="youtuber-link">Inoxtag</a></li>
+                        <li><a href="https://www.instagram.com/amixem/" target="_blank"
+                                class="youtuber-link">Amixem</a></li>
+                        <li><a href="https://www.instagram.com/levraimcfly/" target="_blank"
+                                class="youtuber-link">McFly</a></li>
+                        <li><a href="https://www.instagram.com/6pri1/" target="_blank"
+                                class="youtuber-link">Cyprien</a></li>
+                        <li><a href="https://www.instagram.com/yvick/" target="_blank" class="youtuber-link">MisterV</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/legrandjd/" target="_blank"
+                                class="youtuber-link">Le Grand JD</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="services-content">
+            <h2>Nos Services</h2>
+            <div class="service">
+                <h3>Création de publicités pour professionnels</h3>
+                <p>Nous créons des campagnes personnalisées afin de maximiser la visibilité de nos clients sur tous les
+                    supports médiatiques.</p>
+            </div>
+            <div class="service">
+                <h3>Publicité pour entreprises</h3>
+                <p>Nous accompagnons les entreprises dans leurs stratégies de communication en proposant des publicités
+                    écoresponsables.</p>
+            </div>
+            <div class="service">
+                <h3>Spécialisation sur le digital</h3>
+                <p>Nous sommes spécialisés dans la création de publicités sur les plateformes digitales. Nous aidons nos
+                    clients à atteindre leurs audiences sur les réseaux sociaux.</p>
+                <ul style="margin-top: 15px;">
+                    <li style="margin-bottom: 10px;">Instagram</li>
+                    <li style="margin-bottom: 10px;">TikTok</li>
+                    <li style="margin-bottom: 10px;">YouTube <a href="#" class="show-example"
+                            data-platform="YouTube">Cliquez ici pour voir un exemple</a></li>
+                    <li style="margin-bottom: 10px;">Facebook <a href="#" class="show-example"
+                            data-platform="Facebook">Cliquez ici pour voir un exemple</a></li>
+                    <li style="margin-bottom: 10px;">Et bien d'autres...</li>
+                </ul>
+            </div>
+            <!-- Nouveau rectangle vertical avec image -->
+            <div class="vertical-image-container">
+                <img src="images/pureleafinfo.png" alt="Image descriptive">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="location">
+        <div class="map-section">
+            <h2>Localisation</h2>
+            <p>Retrouvez notre siège social à Dublin, en Irlande.</p>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-info">
+        <img src="images/logo.png" alt="Logo Coin Gauche" class="corner-logo left"> <!-- Logo en haut à gauche -->
+        <img src="images/logo.png" alt="Logo Coin Haut Droite" class="corner-logo top-right"> <!-- Logo en haut à droite -->
+        <h2>Contactez-nous</h2>
+        <p>Email : <a href="mailto:pureleaf@contact.fr">pureleaf@contact.fr</a></p>
+        <p>Téléphone : <a href="tel:+33768442454">07 68 44 24 54</a></p>
+        <p>Adresse du siège social : Dublin, Irlande</p>
+        <img src="images/logo.png" alt="Logo Coin Bas Gauche" class="corner-logo bottom-left"> <!-- Logo en bas à gauche -->
+        <img src="images/logo.png" alt="Logo Coin Droit" class="corner-logo right"> <!-- Logo en bas à droite -->
+    </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>PureLeaf Marketing - Engageons-nous pour un monde plus vert !</p>
+        </div>
+    </footer>
+
+    <!-- Example Modal -->
+    <div class="example-modal" id="example-modal">
+    <iframe id="example-video-iframe" style="display: none;" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img id="example-image" src="" alt="Exemple de publicité" style="display: none;">
+</div>
+
+    <script>
+    $(document).ready(function () {
+        // Gérer l'affichage de la liste de YouTubers
+        $('#show-youtubers').on('click', function () {
+            $('#youtuber-list').slideToggle();
+        });
+
+        // Effet de grossissement sur les liens des YouTubers
+        $('.youtuber-list a').hover(function () {
+            $(this).css('font-size', '1.2em');
+        }, function () {
+            $(this).css('font-size', '1em');
+        });
+
+        // Gérer le clic sur "Cliquez ici pour voir un exemple"
+        $('.show-example').on('click', function (e) {
+            e.preventDefault(); // Empêcher le comportement par défaut du lien
+            var platform = $(this).data('platform');
+
+            // Afficher la modal avec animation
+            $('#example-modal').css('display', 'flex'); // Utiliser flex pour centrer le contenu
+            $('#example-modal').addClass('show');
+
+            if (platform === 'Facebook') {
+                // Assurez-vous de cacher l'élément vidéo avant d'afficher l'image
+                $('#example-video-iframe').hide()
+                $('#example-image').attr('src', 'images/facebookpub.png').show();
+            } else if (platform === 'YouTube') {
+                // Assurez-vous de cacher l'image avant d'afficher l'iframe
+        $('#example-image').hide();
+        $('#example-video-iframe').attr('src', 'https://www.youtube.com/embed/hZbNb_ha_e8');
+        $('#example-video-iframe').show();
+    }
+
+            // S'assurer que la modal est visible et ajouter une animation d'apparition
+            $('#example-modal').css('display', 'flex').hide().fadeIn(500); // Ajoute une animation d'apparition en fondu
+        });
+
+        // Fermer la modal quand on clique en dehors du contenu
+        $('#example-modal').on('click', function (e) {
+            if (!$(e.target).is('#example-image') && !$(e.target).is('#example-video')) {
+                $('#example-modal').removeClass('show');
+                setTimeout(function () {
+                    $('#example-modal').fadeOut(500, function () {
+                        $(this).css('display', 'none');
+                        $('#example-image').attr('src', '').hide(); // Réinitialiser l'image
+                        $('#video-source').attr('src', ''); // Réinitialiser la vidéo
+                        $('#example-video').hide();
+                    });
+                }, 0); // Utiliser fadeOut pour avoir un effet de disparition en douceur
+            }
+        });
+
+        // Initialiser la carte OpenStreetMap avec Leaflet
+        var map = L.map('map').setView([53.349805, -6.26031], 13); // Coordonnées de Dublin
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([53.349805, -6.26031]).addTo(map)
+            .bindPopup('Dublin, Irlande')
+            .openPopup();
+
+        // Défilement fluide pour les liens d'ancrage
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            const target = $($(this).attr('href'));
+            if (target.length) {
+                $('html, body').animate({ scrollTop: target.offset().top }, 1000);
+            }
+        });
+
+        // Gérer l'affichage agrandi de l'image verticale lors du clic
+        const verticalImageContainer = document.querySelector('.vertical-image-container');
+
+        if (verticalImageContainer) {
+            verticalImageContainer.addEventListener('click', function () {
+                // Créer la modal pour afficher l'image
+                const modal = document.createElement('div');
+                modal.classList.add('example-modal');
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.zIndex = '1000';
+
+                // Créer une image dans la modal
+                const img = document.createElement('img');
+                img.src = 'images/pureleafinfo.png'; // Assurez-vous que l'image est bien à cet emplacement
+                img.style.maxWidth = '100%';
+                img.style.maxHeight = '100%';
+                img.style.borderRadius = '10px';
+                img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+
+                // Ajouter l'image à la modal
+                modal.appendChild(img);
+                document.body.appendChild(modal);
+
+                // Ajouter la classe 'show' après une petite pause pour l'animation d'apparition
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+
+                // Fermer la modal lorsqu'on clique en dehors de l'image
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        // Retirer la classe 'show' pour déclencher l'animation de disparition
+                        modal.classList.remove('show');
+
+                        // Attendre la fin de l'animation de disparition avant de retirer la modal du DOM
+                        setTimeout(() => {
+                            document.body.removeChild(modal);
+                        }, 500); // Correspond à la durée de la transition (0.5s)
+                    }
+                });
+            });
+        }
+    });
+</script>
+
+
+</body>
+
+</html>
